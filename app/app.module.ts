@@ -8,6 +8,8 @@ import {MenuComponent} from "./menu/menu.component"
 import {VideoDetailsComponent} from "./video-details/video-details.component";
 import {ReviewsComponent} from "./reviews/reviews.component";
 import {HomeComponent} from "./home/home.component";
+import {DonateComponent} from "./donate/donate.component";
+import {PluginComponent} from "./plugin/plugin.component";
 
 @NgModule({
   imports: [
@@ -23,6 +25,8 @@ import {HomeComponent} from "./home/home.component";
     MenuComponent,
     VideoDetailsComponent,
     ReviewsComponent,
+    DonateComponent,
+    PluginComponent,
   ],
 
   bootstrap: [

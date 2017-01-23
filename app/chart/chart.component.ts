@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'chart',
   templateUrl: 'chart.component.html',
-  // styleUrls:['chart.component.css']
+  // styleUrls:['donate.component.css']
 })
 
 
