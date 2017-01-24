@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'chart',
   templateUrl: 'chart.component.html',
-  // styleUrls:['donate.component.css']
+  styleUrls:['chart.component.css']
 })
 
 
+
+
 export class ChartComponent  {
+
 }

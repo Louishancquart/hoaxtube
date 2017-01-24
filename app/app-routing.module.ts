@@ -7,6 +7,8 @@ import {VideoBoxComponent} from "./video-box/video-box.component";
 import {ReviewsComponent} from "./reviews/reviews.component";
 import {PluginComponent} from "./plugin/plugin.component";
 import {DonateComponent} from "./donate/donate.component";
+import {RegisterComponent} from "./register/register.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'video-details',     component: VideoDetailsComponent },
   { path: 'plugin',     component: PluginComponent },
   { path: 'donate',     component: DonateComponent },
+  { path: 'login',     component: LoginComponent },
+  { path: 'register',     component: RegisterComponent },
 ];
 
 

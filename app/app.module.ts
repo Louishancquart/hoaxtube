@@ -10,6 +10,8 @@ import {ReviewsComponent} from "./reviews/reviews.component";
 import {HomeComponent} from "./home/home.component";
 import {DonateComponent} from "./donate/donate.component";
 import {PluginComponent} from "./plugin/plugin.component";
+import {LoginComponent} from "./login/login.component";
+import {RegisterComponent} from "./register/register.component";
 
 @NgModule({
   imports: [
@@ -27,6 +29,8 @@ import {PluginComponent} from "./plugin/plugin.component";
     ReviewsComponent,
     DonateComponent,
     PluginComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
 
   bootstrap: [

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'plugin',
   templateUrl: 'donate.component.html',
-  // styleUrls:['plugin.component.css']
+  // styleUrls:['login.component.css']
 })
 
 
