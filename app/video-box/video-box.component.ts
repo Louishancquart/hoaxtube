@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
   styleUrls:['video-box.component.css']
 })
 
+
+
+
+export class VideoBoxComponent  {
+}
+
 // function insertTableIntoPlayer() {
 //   var playerElement=document.getElementById("player");
 //   var parent_Element=playerElement.parentElement;
@@ -30,7 +36,3 @@ import { Component } from '@angular/core';
 //   z2.setAttribute("id", "plugin");
 //   document.getElementById("myTr").appendChild(z2);
 // }
-
-
-export class VideoBoxComponent  {
-}

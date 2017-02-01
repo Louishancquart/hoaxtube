@@ -12,11 +12,15 @@ import {DonateComponent} from "./donate/donate.component";
 import {PluginComponent} from "./plugin/plugin.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
+import {DocumentService} from "./services/document.service";
+import {InMemoryDataService} from "./services/in-memory-data.service";
+import {InMemoryWebApiModule} from "angular-in-memory-web-api";
 
 @NgModule({
   imports: [
     AppRoutingModule,
     BrowserModule,
+    // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
 
   declarations: [
@@ -33,8 +37,12 @@ import {RegisterComponent} from "./register/register.component";
     RegisterComponent,
   ],
 
+  providers: [
+    DocumentService
+  ],
+
   bootstrap: [
-  AppComponent
+    AppComponent
   ]
 })
 export class AppModule {

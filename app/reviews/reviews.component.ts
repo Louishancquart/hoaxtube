@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import {DocumentService} from "../services/document.service";
+import {Router} from "@angular/router";
 
 @Component({
   moduleId: module.id,
@@ -6,4 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: 'reviews.component.html',
   styleUrls: ['reviews.component.css'],
 })
-export class ReviewsComponent  {}
+export class ReviewsComponent  {
+
+
+// constructor(private documentService: DocumentService/*, private router: Router */) { }
+//
+//  // ngOnInit(): void {
+//  //    // this.documentService.getDocuments();
+//  //  }
+
+}

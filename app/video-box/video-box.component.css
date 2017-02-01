@@ -1,26 +1,3 @@
-/*div{*/
-  /*border-radius: 10px; overflow: hidden;*/
-  /*display: inline-block;*/
-  /*float: left;*/
-/*}*/
-
-/*#plugin{*/
-  /*float: right;*/
-  /*width: 5%;*/
-  /*height: inherit;*/
-  /*background: #eee;*/
-  /*color:#414042;*/
-/*}*/
-
-/*#plugin{*/
-  /*display: inline-block;*/
-  /*width: 20px;*/
-  /*box-sizing: border-box;*/
-  /*font-weight: bold;*/
-  /*font-family: arial, sans-serif;*/
-  /*padding: 10px;*/
-/*}*/
-
 td#plugin{
   width: 1%;
   background: greenyellow;
