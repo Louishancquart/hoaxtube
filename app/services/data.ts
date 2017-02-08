@@ -1,27 +1,61 @@
-export class Video{
-  id: string; //hash of the video
+export enum RReviewType {
+  true = 1,
+  false = -1,
+  controversial = 0
+}
+
+export enum RDocumentType {
+  video = 1,
+  web = 2,
+  pdf = 3,
+  picture = 4,
+  audio = 5,
+  forum = 6
+}
+
+export class RUser{
+  id: number;
   name: string;
-  sequences: Sequence[];
+  password: string;
 }
 
-export class Sequence{
-  id: number;
-  start: number;
-  end: number;
-}
-
-export class Document{
-  id: number;
+export class RDocument{
+  id: string;
   name: string;
   url: string;
-  positive_review: Review;
-  negative_review: Review;
-  controversial_review: Review;
+  relevance: number;
+  checked_times: number;
+  // uploader: RUser;
+  // uploaded_date: Date;
+  type: RDocumentType;
+  // creation_date: Date;
+  positive_review: RReview;
+  negative_review: RReview;
+  controversial_review: RReview;
+  parts: RPart[];
 }
 
-export class Review{
+// export class Video{
+//   id: string; //hash of the video
+// name: string;
+// }
+
+export class RPart{
+id: number;
+start: number;
+end: number;
+checked_times: number;
+creation_user: RUser;
+creation_date: Date;
+positive_review: RReview;
+negative_review: RReview;
+controversial_review: RReview;
+}
+
+
+export class RReview{
   id: number;
-  type: number;
+  type: RReviewType;
   confirmed_times: number;
-  relying_docs: Document[];
+  relying_docs: RDocument[];
 }

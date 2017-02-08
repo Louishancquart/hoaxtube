@@ -1,21 +1,32 @@
 <div class="box">
-  <div class="video-title">Reviews</div>
+
+  <a routerLink="/reviews">
+    <div class="video-title">
+      Reviews
+    </div>
+  </a>
   <br>
   <div class="tabs is-boxed">
     <ul>
-      <li class="is-active">
+      <li class="is-active"
+          [class.is-active]="'TrueTab' === selectedTab"
+          (click)="onSelectTab('TrueTab')">
         <a>
           <span class="icon is-small"><i class="fa fa-check"></i></span>
           <span>True</span>
         </a>
       </li>
-      <li>
+      <li
+        [class.is-active]="'FalseTab' === selectedTab"
+        (click)="onSelectTab('FalseTab')">
         <a>
-          <span class="icon is-small"><i class="fa fa-danger"></i></span>
+          <span class="icon is-small"><i class="fa fa-warning"></i></span>
           <span>False</span>
         </a>
       </li>
-      <li>
+      <li
+        [class.is-active]="'ControversialTab' === selectedTab"
+        (click)="onSelectTab('ControversialTab')">
         <a>
           <span class="icon is-small"><i class="fa fa-question"></i></span>
           <span>Controversial</span>
@@ -24,98 +35,35 @@
     </ul>
   </div>
   <div>
-    <div class="video-title">Video Description</div>
-    <progress class="progress is-success" value="60" max="100">60%</progress>
+
+
+    <div [ngSwitch]="">
+      <progress class="progress is-success" value="60" max="100">60%</progress>
+      <br>
+    </div>
+
+    <div class="event-timeline">
+      <ul>
+        <li *ngFor="let doc of videos; let i = index;"
+            [class.selected]="doc === selectedDoc"
+            (click)="onSelect(doc)">
+
+
+          <p class="event-item">
+            <small>{{ 246-i*doc.id }}</small>
+            <!-- TODO: add a times checked document -->
+            <span class="icon-item-type"><i class="fa fa-star"></i></span>
+            <a href="#">{{doc.name}}</a> shared by
+            <a href="#">Anonymous</a>
+
+            <!-- TODO: add users and username -->
+            <small>1 hours ago</small>
+            <!-- TODO: add a formatted date -->
+          </p>
+
+          <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+        </li>
+      </ul>
+    </div>
   </div>
-
-
-
-  <div class=" event-timeline">
-    <!--<p>-->
-      <!--<a class="button is-light">-->
-                  <!--<span class="icon">-->
-                    <!--<img src="https://placehold.it/64x64">-->
-                  <!--</span>-->
-        <!--<span>username</span>-->
-        <!--<span class="icon icon-chevron">-->
-                    <!--<i class="fa fa-chevron-down"></i>-->
-                  <!--</span>-->
-      <!--</a>-->
-    <!--</p>-->
-    <!--<hr>-->
-    <!--<ul class="heroes">-->
-      <!--<li *ngFor="let hero of heroes"-->
-          <!--[class.selected]="hero === selectedHero"-->
-          <!--(click)="onSelect(hero)">-->
-        <!--<span class="badge">{{hero.id}}</span>-->
-        <!--<span>{{hero.name}}</span>-->
-        <!--<button class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>-->
-      <!--</li>-->
-    <!--</ul>-->
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-    <p class="event-item">
-      <small>234</small>
-      <span class="icon-item-type"><i class="fa fa-star"></i></span>
-      <a href="#">Document title</a> shared by
-      <a href="#">jsmith</a>
-      <small>1 hours ago</small>
-    </p>
-  </div>
-  <!--<div class="media-content">-->
-    <!--<div class="content">-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<a>Doc sur blabla</a><br>-->
-      <!--<div class="control is-grouped-right">-->
-        <!--<p class="control">-->
-          <!--<button class="button is-primary">Add Document</button>-->
-        <!--</p>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
 </div>
-

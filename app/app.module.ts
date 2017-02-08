@@ -15,12 +15,16 @@ import {RegisterComponent} from "./register/register.component";
 import {DocumentService} from "./services/document.service";
 import {InMemoryDataService} from "./services/in-memory-data.service";
 import {InMemoryWebApiModule} from "angular-in-memory-web-api";
+import {HttpModule} from "@angular/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     AppRoutingModule,
     BrowserModule,
-    // InMemoryWebApiModule.forRoot(InMemoryDataService)
+    FormsModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
 
   declarations: [
@@ -38,7 +42,7 @@ import {InMemoryWebApiModule} from "angular-in-memory-web-api";
   ],
 
   providers: [
-    DocumentService
+    DocumentService,
   ],
 
   bootstrap: [

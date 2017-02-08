@@ -3,13 +3,12 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {Document, Sequence} from './data';
-import {toPromise} from "rxjs/operator/toPromise";
+import {RDocument} from './data';
 
 @Injectable()
 export class DocumentService {
 
-  private documentsUrl = 'api/documents';  // URL to web api
+  private documentsUrl = 'api/data';  // URL to web api
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
@@ -20,30 +19,36 @@ export class DocumentService {
     return Promise.reject(error.message || error);
   }
 
-  getDocuments(): Promise<Document []> {
+  getDocuments(): Promise<RDocument[]> {
     return this.http.get(this.documentsUrl)
       .toPromise()
-      .then(response => response.json().data as Document[])
+      .then(response => response.json().data as RDocument)
       .catch(this.handleError);
   }
 
-  // getDocumentsBySequence(sequence: Sequence): Promise<Document []> {
+  getVideoDocument(): Promise<RDocument> {
+    return this.http.get(this.documentsUrl)
+      .toPromise()
+      .then(response => response.json().data as RDocument)
+      .catch(this.handleError);
+  }
+  // getDocumentsBySequence(sequence: Video): Promise<Video []> {
   //   //TODO
   //   return this.http.get(this.documentsUrl)
   //     .toPromise()
-  //     .then(response => response.json().data as Document[])
+  //     .then(response => response.json().data as Video[])
   //     .catch(this.handleError);
   // }
 
-  getDocument(id: number): Promise<Document> {
+  getDocument(id: number): Promise<RDocument> {
     const url = `${this.documentsUrl}/${id}`;
     return this.http.get(url)
       .toPromise()
-      .then(response => response.json().data as Document)
+      .then(response => response.json().data as RDocument)
       .catch(this.handleError);
   }
 
-  update(document: Document): Promise<Document> {
+  update(document: RDocument): Promise<RDocument> {
     const url = `${this.documentsUrl}/${document.id}`;
     return this.http
       .put(url, JSON.stringify(document), {headers: this.headers})
@@ -52,7 +57,7 @@ export class DocumentService {
       .catch(this.handleError);
   }
 
-  create(name: string): Promise<Document> {
+  create(name: string): Promise<RDocument> {
     return this.http
       .post(this.documentsUrl, JSON.stringify({name: name}),{headers: this.headers})
       .toPromise()
