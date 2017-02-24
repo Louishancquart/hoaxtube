@@ -8,7 +8,7 @@ import {RDocument} from './data';
 @Injectable()
 export class DocumentService {
 
-  private documentsUrl = 'api/data';  // URL to web api
+  private documentsUrl = 'api/videoDocument';  // URL to web api
   private headers = new Headers({'Content-Type': 'application/json'});
 
 

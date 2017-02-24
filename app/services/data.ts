@@ -1,6 +1,6 @@
 export enum RReviewType {
-  true = 1,
-  false = -1,
+  positive = 1,
+  negative = -1,
   controversial = 0
 }
 

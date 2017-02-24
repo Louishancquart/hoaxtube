@@ -23,8 +23,8 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    // HttpModule,
+    // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
 
   declarations: [

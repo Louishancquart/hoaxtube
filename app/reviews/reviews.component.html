@@ -37,23 +37,24 @@
   <div>
 
 
-    <div [ngSwitch]="">
+    <div>
       <progress class="progress is-success" value="60" max="100">60%</progress>
       <br>
     </div>
 
     <div class="event-timeline">
+
       <ul>
-        <li *ngFor="let doc of videos; let i = index;"
+        <li *ngFor="let doc of docList; let i = index;"
             [class.selected]="doc === selectedDoc"
             (click)="onSelect(doc)">
 
 
           <p class="event-item">
-            <small>{{ 246-i*doc.id }}</small>
+            <small>{{ 246-i* doc.id }}</small>
             <!-- TODO: add a times checked document -->
             <span class="icon-item-type"><i class="fa fa-star"></i></span>
-            <a href="#">{{doc.name}}</a> shared by
+            <a href="#">{{doc.id}}</a> shared by
             <a href="#">Anonymous</a>
 
             <!-- TODO: add users and username -->

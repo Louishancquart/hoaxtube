@@ -9,7 +9,7 @@ export class InMemoryDataService implements InMemoryDbService {
         url: 'http://youtube.com/L3cpFYNPYz8',
         relevance: 3,
         checked_times: 234,
-        // uploader: {
+        // uploader:
         //   id:1,
         //   name: 'toto',
         //   password: '1234567890'
@@ -52,7 +52,7 @@ export class InMemoryDataService implements InMemoryDbService {
                     id: 0,
                     type: 1,
                     confirmed_times: 23,
-                    relying_docs: {}
+                    relying_docs: []
                   }
                   ,
                   negative_review: {
