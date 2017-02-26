@@ -4,7 +4,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app/app.component";
 import {ChartComponent} from "./chart/chart.component";
 import {VideoBoxComponent} from "./video-box/video-box.component";
-import {MenuComponent} from "./menu/menu.component"
+import {MenuComponent} from "./menu/menu.component";
 import {VideoDetailsComponent} from "./video-details/video-details.component";
 import {ReviewsComponent} from "./reviews/reviews.component";
 import {HomeComponent} from "./home/home.component";
@@ -13,16 +13,15 @@ import {PluginComponent} from "./plugin/plugin.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {DocumentService} from "./services/document.service";
-import {InMemoryDataService} from "./services/in-memory-data.service";
-import {InMemoryWebApiModule} from "angular-in-memory-web-api";
-import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     AppRoutingModule,
     BrowserModule,
     FormsModule,
+    NgbModule.forRoot(),
     // HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
