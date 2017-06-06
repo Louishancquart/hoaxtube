@@ -22,7 +22,7 @@ export class DocumentService {
   getDocuments(): Promise<RDocument[]> {
     return this.http.get(this.documentsUrl)
       .toPromise()
-      .then(response => response.json().data as RDocument)
+      .then(response => response.json().data as RDocument [])
       .catch(this.handleError);
   }
 
