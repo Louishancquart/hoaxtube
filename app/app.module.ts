@@ -14,6 +14,7 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {DocumentService} from './services/document.service';
 import {FormsModule} from '@angular/forms';
+
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -21,7 +22,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    // NgModule.forRoot(),
+     // NgModule.forRoot(),
     // HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],

@@ -1,11 +1,15 @@
-td#plugin{
-  width: 1%;
-  background: greenyellow;
+:host {
+  display: flex;
 }
-#bars{
-  border-radius: 10px;
-  overflow: hidden;
+
+.video {
+  flex: 98%;
 }
+
+#plugin{
+  flex: 1%;
+}
+
 
 #false {
   background: #CC4945;
