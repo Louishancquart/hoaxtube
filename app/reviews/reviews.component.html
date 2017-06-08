@@ -10,73 +10,43 @@
 
   <div class="tabs is-boxed">
 
-
-
-    <ngb-tabset>
+    <ngb-tabset class="container">
       <ngb-tab title="True">
         <ng-template ngbTabContent>
           <div>
             <progress class="progress is-success" value="60" max="100">60%</progress>
             <br>
           </div>
+            <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
+                    <span class="badge">{{ doc.relevance }}</span>
+                    <a href="{{ doc.url }}">{{ doc.name }}</a>
+                </li>
 
-
-
-            <ul>
-              <li *ngFor="let doc of docList; let i = index;"
-                  [class.selected]="doc === selectedDoc"
-                  (click)="onSelect(doc)">
-
-
-                <p class="event-item">
-                  <small>{{ 246-i* doc.id }}</small>
-                  <!-- TODO: add a times checked document -->
-                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                  <a href="#">{{doc.id}}</a> shared by
-                  <a href="#">Anonymous</a>
-
-                  <!-- TODO: add users and username -->
-                  <small>1 hours ago</small>
-                  <!-- TODO: add a formatted date -->
-                </p>
-
-                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-              </li>
+                <li class="list-group-item col-md-12" >
+                    +
+                </li>
             </ul>
+            </div>
 
         </ng-template>
       </ngb-tab>
 
       <ngb-tab title="False">
         <ng-template ngbTabContent>
-          <div>
-            <progress class="progress is-success" value="60" max="100">60%</progress>
-            <br>
-          </div>
-
-
-            <ul>
-              <li *ngFor="let doc of docList; let i = index;"
-                  [class.selected]="doc === selectedDoc"
-                  (click)="onSelect(doc)">
-
-
-                <p class="event-item">
-                  <small>{{ 246-i* doc.id }}</small>
-                  <!-- TODO: add a times checked document -->
-                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                  <a href="#">{{doc.id}}</a> shared by
-                  <a href="#">Anonymous</a>
-
-                  <!-- TODO: add users and username -->
-                  <small>1 hours ago</small>
-                  <!-- TODO: add a formatted date -->
-                </p>
-
-                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-              </li>
-            </ul>
-
+            <div>
+                <progress class="progress is-success" value="60" max="100">60%</progress>
+                <br>
+            </div>
+            <div class="container">
+                <ul class="list-group">
+                    <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
+                        <span class="badge">{{ doc.relevance }}</span>
+                        <a href="{{ doc.url }}">{{ doc.name }}</a>
+                    </li>
+                </ul>
+            </div>
         </ng-template>
       </ngb-tab>
 
@@ -85,75 +55,24 @@
 
       <ngb-tab title="SoSo">
         <ng-template ngbTabContent>
-          <div>
-            <progress class="progress is-success" value="60" max="100">60%</progress>
-            <br>
-          </div>
-
-
-
-            <ul>
-              <li *ngFor="let doc of docList; let i = index;"
-                  [class.selected]="doc === selectedDoc"
-                  (click)="onSelect(doc)">
-
-
-                <p class="event-item">
-                  <small>{{ 246-i* doc.id }}</small>
-                  <!-- TODO: add a times checked document -->
-                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                  <a href="#">{{doc.id}}</a> shared by
-                  <a href="#">Anonymous</a>
-
-                  <!-- TODO: add users and username -->
-                  <small>1 hours ago</small>
-                  <!-- TODO: add a formatted date -->
-                </p>
-
-                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-              </li>
-            </ul>
-
+            <div>
+                <progress class="progress is-success" value="60" max="100">60%</progress>
+                <br>
+            </div>
+            <div class="container">
+                <ul class="list-group">
+                    <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
+                        <span class="badge">{{ doc.relevance }}</span>
+                        <a href="{{ doc.url }}">{{ doc.name }}</a>
+                    </li>
+                </ul>
+            </div>
         </ng-template>
       </ngb-tab>
 
 
 
     </ngb-tabset>
-
-
-
-
-      <!--<ul>-->
-      <!--<li class="is-active"-->
-          <!--[class.is-active]="'TrueTab' === selectedTab"-->
-          <!--(click)="onSelectTab('TrueTab')">-->
-        <!--<a>-->
-          <!--<span class="icon is-small"><i class="fa fa-check"></i></span>-->
-          <!--<span>True</span>-->
-        <!--</a>-->
-      <!--</li>-->
-      <!--<li-->
-        <!--[class.is-active]="'FalseTab' === selectedTab"-->
-        <!--(click)="onSelectTab('FalseTab')">-->
-        <!--<a>-->
-          <!--<span class="icon is-small"><i class="fa fa-warning"></i></span>-->
-          <!--<span>False</span>-->
-        <!--</a>-->
-      <!--</li>-->
-      <!--<li-->
-        <!--[class.is-active]="'ControversialTab' === selectedTab"-->
-        <!--(click)="onSelectTab('ControversialTab')">-->
-        <!--<a>-->
-          <!--<span class="icon is-small"><i class="fa fa-question"></i></span>-->
-          <!--<span>Controversial</span>-->
-        <!--</a>-->
-      <!--</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-  <!--<div>-->
-
-
 
   </div>
 </div>

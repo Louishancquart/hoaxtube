@@ -43,7 +43,7 @@ const DOCS: RDocument[] = [
     id: '11',
     name: 'Doc1',
     url: 'http://wikipedia.com',
-    relevance: 5,
+    relevance: 125,
     checked_times: 275,
     type: 1,
     positive_review: {
@@ -71,7 +71,7 @@ const DOCS: RDocument[] = [
     id: '12',
     name: 'Doc1',
     url: 'http://wikipedia.com',
-    relevance: 5,
+    relevance: 460,
     checked_times: 275,
     type: 1,
     positive_review: {
