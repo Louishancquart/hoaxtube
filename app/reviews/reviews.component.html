@@ -6,65 +6,154 @@
     </div>
   </a>
   <br>
+
+
   <div class="tabs is-boxed">
-    <ul>
-      <li class="is-active"
-          [class.is-active]="'TrueTab' === selectedTab"
-          (click)="onSelectTab('TrueTab')">
-        <a>
-          <span class="icon is-small"><i class="fa fa-check"></i></span>
-          <span>True</span>
-        </a>
-      </li>
-      <li
-        [class.is-active]="'FalseTab' === selectedTab"
-        (click)="onSelectTab('FalseTab')">
-        <a>
-          <span class="icon is-small"><i class="fa fa-warning"></i></span>
-          <span>False</span>
-        </a>
-      </li>
-      <li
-        [class.is-active]="'ControversialTab' === selectedTab"
-        (click)="onSelectTab('ControversialTab')">
-        <a>
-          <span class="icon is-small"><i class="fa fa-question"></i></span>
-          <span>Controversial</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div>
 
 
-    <div>
-      <progress class="progress is-success" value="60" max="100">60%</progress>
-      <br>
-    </div>
 
-    <div class="event-timeline">
-
-      <ul>
-        <li *ngFor="let doc of docList; let i = index;"
-            [class.selected]="doc === selectedDoc"
-            (click)="onSelect(doc)">
+    <ngb-tabset>
+      <ngb-tab title="True">
+        <ng-template ngbTabContent>
+          <div>
+            <progress class="progress is-success" value="60" max="100">60%</progress>
+            <br>
+          </div>
 
 
-          <p class="event-item">
-            <small>{{ 246-i* doc.id }}</small>
-            <!-- TODO: add a times checked document -->
-            <span class="icon-item-type"><i class="fa fa-star"></i></span>
-            <a href="#">{{doc.id}}</a> shared by
-            <a href="#">Anonymous</a>
 
-            <!-- TODO: add users and username -->
-            <small>1 hours ago</small>
-            <!-- TODO: add a formatted date -->
-          </p>
+            <ul>
+              <li *ngFor="let doc of docList; let i = index;"
+                  [class.selected]="doc === selectedDoc"
+                  (click)="onSelect(doc)">
 
-          <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-        </li>
-      </ul>
-    </div>
+
+                <p class="event-item">
+                  <small>{{ 246-i* doc.id }}</small>
+                  <!-- TODO: add a times checked document -->
+                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                  <a href="#">{{doc.id}}</a> shared by
+                  <a href="#">Anonymous</a>
+
+                  <!-- TODO: add users and username -->
+                  <small>1 hours ago</small>
+                  <!-- TODO: add a formatted date -->
+                </p>
+
+                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+              </li>
+            </ul>
+
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="False">
+        <ng-template ngbTabContent>
+          <div>
+            <progress class="progress is-success" value="60" max="100">60%</progress>
+            <br>
+          </div>
+
+
+            <ul>
+              <li *ngFor="let doc of docList; let i = index;"
+                  [class.selected]="doc === selectedDoc"
+                  (click)="onSelect(doc)">
+
+
+                <p class="event-item">
+                  <small>{{ 246-i* doc.id }}</small>
+                  <!-- TODO: add a times checked document -->
+                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                  <a href="#">{{doc.id}}</a> shared by
+                  <a href="#">Anonymous</a>
+
+                  <!-- TODO: add users and username -->
+                  <small>1 hours ago</small>
+                  <!-- TODO: add a formatted date -->
+                </p>
+
+                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+              </li>
+            </ul>
+
+        </ng-template>
+      </ngb-tab>
+
+
+
+
+      <ngb-tab title="SoSo">
+        <ng-template ngbTabContent>
+          <div>
+            <progress class="progress is-success" value="60" max="100">60%</progress>
+            <br>
+          </div>
+
+
+
+            <ul>
+              <li *ngFor="let doc of docList; let i = index;"
+                  [class.selected]="doc === selectedDoc"
+                  (click)="onSelect(doc)">
+
+
+                <p class="event-item">
+                  <small>{{ 246-i* doc.id }}</small>
+                  <!-- TODO: add a times checked document -->
+                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                  <a href="#">{{doc.id}}</a> shared by
+                  <a href="#">Anonymous</a>
+
+                  <!-- TODO: add users and username -->
+                  <small>1 hours ago</small>
+                  <!-- TODO: add a formatted date -->
+                </p>
+
+                <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+              </li>
+            </ul>
+
+        </ng-template>
+      </ngb-tab>
+
+
+
+    </ngb-tabset>
+
+
+
+
+      <!--<ul>-->
+      <!--<li class="is-active"-->
+          <!--[class.is-active]="'TrueTab' === selectedTab"-->
+          <!--(click)="onSelectTab('TrueTab')">-->
+        <!--<a>-->
+          <!--<span class="icon is-small"><i class="fa fa-check"></i></span>-->
+          <!--<span>True</span>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li-->
+        <!--[class.is-active]="'FalseTab' === selectedTab"-->
+        <!--(click)="onSelectTab('FalseTab')">-->
+        <!--<a>-->
+          <!--<span class="icon is-small"><i class="fa fa-warning"></i></span>-->
+          <!--<span>False</span>-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li-->
+        <!--[class.is-active]="'ControversialTab' === selectedTab"-->
+        <!--(click)="onSelectTab('ControversialTab')">-->
+        <!--<a>-->
+          <!--<span class="icon is-small"><i class="fa fa-question"></i></span>-->
+          <!--<span>Controversial</span>-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+  <!--<div>-->
+
+
+
   </div>
 </div>

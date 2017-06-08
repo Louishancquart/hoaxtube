@@ -13,6 +13,9 @@
       // our app is within the app folder
       app: 'app',
 
+
+
+
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -23,9 +26,19 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
-      // other libraries
+        // //angular material
+        // '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
+
+
+
+        // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+
+        //bootstrap
+        '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
+
+
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

@@ -13,13 +13,13 @@ export enum RDocumentType {
   forum = 6
 }
 
-export class RUser{
+export class RUser {
   id: number;
   name: string;
   password: string;
 }
 
-export class RDocument{
+export class RDocument {
   id: string;
   name: string;
   url: string;
@@ -40,7 +40,7 @@ export class RDocument{
 // name: string;
 // }
 
-export class RPart{
+export class RPart {
 id: number;
 start: number;
 end: number;
@@ -53,7 +53,7 @@ controversial_review: RReview;
 }
 
 
-export class RReview{
+export class RReview {
   id: number;
   type: RReviewType;
   confirmed_times: number;

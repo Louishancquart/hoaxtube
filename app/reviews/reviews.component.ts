@@ -1,8 +1,13 @@
 ///<reference path="../services/data.ts"/>
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+// import {Router} from "@angular/router";
+
 // import {DocumentService} from "../services/document.service";
-import {RDocument, RPart, RReview} from "../services/data";
+import {RDocument} from '../services/data';
+
+
+
+
 
 
 const DOCS: RDocument[] = [
@@ -12,7 +17,7 @@ const DOCS: RDocument[] = [
     url: 'http://wikipedia.com',
     relevance: 5,
     checked_times: 275,
-    type:1,
+    type: 1,
     positive_review: {
       id: 0,
       type: 1,
@@ -40,7 +45,7 @@ const DOCS: RDocument[] = [
     url: 'http://wikipedia.com',
     relevance: 5,
     checked_times: 275,
-    type:1,
+    type: 1,
     positive_review: {
       id: 0,
       type: 1,
@@ -68,7 +73,7 @@ const DOCS: RDocument[] = [
     url: 'http://wikipedia.com',
     relevance: 5,
     checked_times: 275,
-    type:1,
+    type: 1,
     positive_review: {
       id: 0,
       type: 1,
@@ -96,7 +101,7 @@ const DOCS: RDocument[] = [
     url: 'http://wikipedia.com',
     relevance: 5,
     checked_times: 275,
-    type:1,
+    type: 1,
     positive_review: {
       id: 0,
       type: 1,
@@ -143,9 +148,9 @@ export class ReviewsComponent implements OnInit {
 
   ngOnInit() {
     // this.getVideoDocument();
-    this.docList= this.getDocList();
+    this.docList = this.getDocList();
     // this.docList = this.getRelatedDocuments(this.getPositiveReview(this.videoDocument));
-    this.selectedTab = "trueTab";
+    this.selectedTab = 'trueTab';
   }
 
   // onSelect(doc: RDocument): void {
@@ -155,6 +160,7 @@ export class ReviewsComponent implements OnInit {
   onSelectTab(tab: string): void {
     this.selectedTab = tab;
   }
+
 
   //
   // getVideoDocument(): void {
