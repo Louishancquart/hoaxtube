@@ -17,14 +17,21 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {DocumentService} from './services/document.service';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+import {MdTabsModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-     NgbModule.forRoot(),
+      MdTabsModule,
+    BrowserAnimationsModule,
+     // NgbModule.forRoot(),
     // HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],

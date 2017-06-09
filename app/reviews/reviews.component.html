@@ -10,69 +10,74 @@
 
   <div class="tabs is-boxed">
 
-    <ngb-tabset class="container">
-      <ngb-tab title="True">
-        <ng-template ngbTabContent>
-          <div>
-            <progress class="progress is-success" value="60" max="100">60%</progress>
-            <br>
-          </div>
-            <div class="container">
-            <ul class="list-group">
-                <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
-                    <span class="badge">{{ doc.relevance }}</span>
-                    <a href="{{ doc.url }}">{{ doc.name }}</a>
-                </li>
 
-                <li class="list-group-item col-md-12" >
-                    +
-                </li>
-            </ul>
-            </div>
-
-        </ng-template>
-      </ngb-tab>
-
-      <ngb-tab title="False">
-        <ng-template ngbTabContent>
-            <div>
-                <progress class="progress is-success" value="60" max="100">60%</progress>
-                <br>
-            </div>
-            <div class="container">
-                <ul class="list-group">
-                    <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
-                        <span class="badge">{{ doc.relevance }}</span>
-                        <a href="{{ doc.url }}">{{ doc.name }}</a>
-                    </li>
-                </ul>
-            </div>
-        </ng-template>
-      </ngb-tab>
+      <md-tab-group>
+          <md-tab label="True">
+              <div class="container">
+              <div class="columns">
+                  <progress class="progress is-success" value="60" max="100">60%</progress>
+                  <br>
+              </div>
 
 
 
 
-      <ngb-tab title="SoSo">
-        <ng-template ngbTabContent>
-            <div>
-                <progress class="progress is-success" value="60" max="100">60%</progress>
-                <br>
-            </div>
-            <div class="container">
-                <ul class="list-group">
-                    <li class="list-group-item col-md-12" *ngFor="let doc of docList; let i = index;">
-                        <span class="badge">{{ doc.relevance }}</span>
-                        <a href="{{ doc.url }}">{{ doc.name }}</a>
-                    </li>
-                </ul>
-            </div>
-        </ng-template>
-      </ngb-tab>
+                  <div class="columns" *ngFor="let doc of docList; let i = index;">
+
+                                  <span class="badge">{{ doc.relevance }}</span>
+                          <a href="{{ doc.url }}">{{ doc.name }}</a>
+                              </div>
+
+
+                  <div class="columns">+</div>
+
+              </div>
+          </md-tab>
 
 
 
-    </ngb-tabset>
 
-  </div>
+
+          <md-tab label="Soso">
+              <div>
+                  <progress class="progress is-success" value="60" max="100">60%</progress>
+                  <br>
+              </div>
+
+              <ul>
+                  <li *ngFor="let doc of docList; let i = index;">
+                      <span class="badge">{{ doc.relevance }}</span>
+                      <a href="{{ doc.url }}">{{ doc.name }}</a>
+                  </li>
+
+                  <li >
+                      +
+                  </li>
+              </ul>
+          </md-tab>
+
+
+          <md-tab label="False">
+              <div>
+                  <progress class="progress is-success" value="60" max="100">60%</progress>
+                  <br>
+              </div>
+
+              <ul>
+                  <li *ngFor="let doc of docList; let i = index;">
+                      <span class="badge">{{ doc.relevance }}</span>
+                      <a href="{{ doc.url }}">{{ doc.name }}</a>
+                  </li>
+
+                  <li >
+                      +
+                  </li>
+              </ul>
+          </md-tab>
+
+
+      </md-tab-group>
+
+
+
 </div>
