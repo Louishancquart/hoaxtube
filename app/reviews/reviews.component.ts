@@ -1,8 +1,8 @@
 ///<reference path="../services/data.ts"/>
 import {Component, OnInit} from '@angular/core';
-// import {Router} from "@angular/router";
+import {Router} from "@angular/router";
 
-// import {DocumentService} from "../services/document.service";
+import {DocumentService} from "../services/document.service";
 import {RDocument} from '../services/data';
 
 
@@ -10,120 +10,9 @@ import {RDocument} from '../services/data';
 
 
 
-const DOCS: RDocument[] = [
-  {
-    id: '11',
-    name: 'Doc1',
-    url: 'http://wikipedia.com',
-    relevance: 5,
-    checked_times: 275,
-    type: 1,
-    positive_review: {
-      id: 0,
-      type: 1,
-      confirmed_times: 23,
-      relying_docs: []
-    }
-    ,
-    negative_review: {
-      id: 0,
-      type: -1,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    controversial_review: {
-      id: 0,
-      type: 0,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    parts: []
-  },
-  {
-    id: '11',
-    name: 'Doc1',
-    url: 'http://wikipedia.com',
-    relevance: 125,
-    checked_times: 275,
-    type: 1,
-    positive_review: {
-      id: 0,
-      type: 1,
-      confirmed_times: 23,
-      relying_docs: []
-    }
-    ,
-    negative_review: {
-      id: 0,
-      type: -1,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    controversial_review: {
-      id: 0,
-      type: 0,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    parts: []
-  },
-  {
-    id: '12',
-    name: 'Doc1',
-    url: 'http://wikipedia.com',
-    relevance: 460,
-    checked_times: 275,
-    type: 1,
-    positive_review: {
-      id: 0,
-      type: 1,
-      confirmed_times: 23,
-      relying_docs: []
-    }
-    ,
-    negative_review: {
-      id: 0,
-      type: -1,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    controversial_review: {
-      id: 0,
-      type: 0,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    parts: []
-  },
-  {
-    id: '13',
-    name: 'Doc1',
-    url: 'http://wikipedia.com',
-    relevance: 5,
-    checked_times: 275,
-    type: 1,
-    positive_review: {
-      id: 0,
-      type: 1,
-      confirmed_times: 23,
-      relying_docs: []
-    }
-    ,
-    negative_review: {
-      id: 0,
-      type: -1,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    controversial_review: {
-      id: 0,
-      type: 0,
-      confirmed_times: 23,
-      relying_docs: []
-    },
-    parts: []
-  },
-];
+// const DOCS: RDocument[] = [
+//
+// ];
 
 @Component({
   moduleId: module.id,
@@ -142,29 +31,34 @@ export class ReviewsComponent implements OnInit {
   selectedTab: string;
 
 
-  // constructor(private documentService: DocumentService) {
-  // }
+  constructor(private documentService: DocumentService) {
+  }
 
 
   ngOnInit() {
-    // this.getVideoDocument();
-    this.docList = this.getDocList();
+
+    this.getDocList();
+
+
     // this.docList = this.getRelatedDocuments(this.getPositiveReview(this.videoDocument));
-    this.selectedTab = 'trueTab';
+    // this.selectedTab = 'trueTab';
   }
 
   // onSelect(doc: RDocument): void {
   //   this.selectedDoc = doc;
   // }
 
-  onSelectTab(tab: string): void {
-    this.selectedTab = tab;
-  }
+  // onSelectTab(tab: string): void {
+  //   this.selectedTab = tab;
+  // }
 
 
+  // getDocument(id: number): RDocument{
+  //   return this.d
+  // }
   //
-  // getVideoDocument(): void {
-  //   this.documentService.getVideoDocument().then(videoDocument => this.videoDocument = videoDocument);
+  // getVideoDocuments(): void {
+  //   this.documentService.getVideoDocuments().then(videoDocument => this.videoDocument = videoDocument);
   //
   // }
 
@@ -181,8 +75,7 @@ export class ReviewsComponent implements OnInit {
   //   return review.relying_docs;
   // }
 
-  getDocList(): RDocument[] {
-    // this.documentService.getVideoDocument().then(videoDocument => this.docList = videoDocument.parts);
-   return DOCS;
-  }
+  getDocList(): void {
+    this.documentService.getDocuments().then(videoDocument => this.docList = videoDocument);
+}
 }

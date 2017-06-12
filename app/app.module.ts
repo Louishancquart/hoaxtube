@@ -20,6 +20,9 @@ import {DocumentService} from './services/document.service';
 
 import {MdTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpModule} from "@angular/http";
+import {InMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./services/in-memory-data.service";
 
 
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -32,8 +35,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
       MdTabsModule,
     BrowserAnimationsModule,
      // NgbModule.forRoot(),
-    // HttpModule,
-    // InMemoryWebApiModule.forRoot(InMemoryDataService)
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
 
   declarations: [

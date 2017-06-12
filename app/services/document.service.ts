@@ -8,7 +8,7 @@ import {RDocument} from './data';
 @Injectable()
 export class DocumentService {
 
-  private documentsUrl = 'api/videoDocument';  // URL to web api
+  private documentsUrl = 'api/videoDocuments';  // URL to web api
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
@@ -19,6 +19,10 @@ export class DocumentService {
     return Promise.reject(error.message || error);
   }
 
+
+
+
+
   getDocuments(): Promise<RDocument[]> {
     return this.http.get(this.documentsUrl)
       .toPromise()
@@ -26,17 +30,10 @@ export class DocumentService {
       .catch(this.handleError);
   }
 
-  getVideoDocument(): Promise<RDocument> {
-    return this.http.get(this.documentsUrl)
-      .toPromise()
-      .then(response => response.json().data as RDocument)
-      .catch(this.handleError);
-  }
-  // getDocumentsBySequence(sequence: Video): Promise<Video []> {
-  //   //TODO
+  // getVideoDocument(): Promise<RDocument> {
   //   return this.http.get(this.documentsUrl)
   //     .toPromise()
-  //     .then(response => response.json().data as Video[])
+  //     .then(response => response.json().data as RDocument)
   //     .catch(this.handleError);
   // }
 
@@ -48,28 +45,36 @@ export class DocumentService {
       .catch(this.handleError);
   }
 
-  update(document: RDocument): Promise<RDocument> {
-    const url = `${this.documentsUrl}/${document.id}`;
-    return this.http
-      .put(url, JSON.stringify(document), {headers: this.headers})
-      .toPromise()
-      .then(() => document)
-      .catch(this.handleError);
-  }
 
-  create(name: string): Promise<RDocument> {
-    return this.http
-      .post(this.documentsUrl, JSON.stringify({name: name}),{headers: this.headers})
-      .toPromise()
-      .then(res => res.json().data)
-      .catch(this.handleError);
-  }
 
-  delete(id: number): Promise<void> {
-    const url=`${ this.documentsUrl }/${id}`;
-    return this.http.delete(url, {headers: this.headers})
-      .toPromise()
-      .then(() => null)
-      .catch(this.handleError);
-  }
+
+
+
+
+
+
+  // update(document: RDocument): Promise<RDocument> {
+  //   const url = `${this.documentsUrl}/${document.id}`;
+  //   return this.http
+  //     .put(url, JSON.stringify(document), {headers: this.headers})
+  //     .toPromise()
+  //     .then(() => document)
+  //     .catch(this.handleError);
+  // }
+  //
+  // create(name: string): Promise<RDocument> {
+  //   return this.http
+  //     .post(this.documentsUrl, JSON.stringify({name: name}),{headers: this.headers})
+  //     .toPromise()
+  //     .then(res => res.json().data)
+  //     .catch(this.handleError);
+  // }
+  //
+  // delete(id: number): Promise<void> {
+  //   const url=`${ this.documentsUrl }/${id}`;
+  //   return this.http.delete(url, {headers: this.headers})
+  //     .toPromise()
+  //     .then(() => null)
+  //     .catch(this.handleError);
+  // }
 }
