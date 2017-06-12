@@ -1,25 +1,24 @@
 :host {
-  display: flex;
+    display: flex;
 }
 
 .video {
-  flex: 99%;
+    flex: 99%;
 }
 
-#plugin{
-  flex: 1%;
+#plugin {
+    flex: 1%;
 }
-
 
 #false {
-  background: #CC4945;
+    background: #CC4945;
 }
 
 #soso {
-  background: #F8A93F;
+    background: #F8A93F;
 }
 
 #true {
-  background: darkturquoise;
+    background: darkturquoise;
 }
 

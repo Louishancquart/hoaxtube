@@ -13,3 +13,7 @@ tree:
 https://github.com/angular-ui-tree/angular-ui-tree
 
 
+
+https://angular.io/docs/ts/latest/guide/server-communication.html#!#cors
+
+

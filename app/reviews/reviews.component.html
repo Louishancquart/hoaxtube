@@ -1,185 +1,178 @@
 <div class="box">
 
-  <a routerLink="/reviews">
-    <div class="video-title">
-      Reviews
-    </div>
-  </a>
-  <br>
+    <a routerLink="/reviews">
+        <div class="video-title">
+            Reviews
+        </div>
+    </a>
+    <br>
 
 
+    <md-tab-group>
+        <md-tab label="True">
+            <div class="container">
+                <div class="columns">
+                    <progress class="progress is-success" value="60" max="100">60%</progress>
+                    <br>
+                </div>
 
-      <md-tab-group>
-          <md-tab label="True">
-              <div class="container">
-              <div class="columns">
-                  <progress class="progress is-success" value="60" max="100">60%</progress>
-                  <br>
-              </div>
+                <div class="event-timeline">
 
-                  <div class="event-timeline">
-
-                      <ul>
-                          <li *ngFor="let doc of docList; let i = index;"
-                              [class.selected]="doc === selectedDoc"
-                              (click)="onSelect(doc)">
-
-
-                              <p class="event-item">
-                                  <small>{{ doc.relevance }}</small>
-                                  <!-- TODO: add a times checked document -->
-                                  <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                                  <a href="#">{{doc.name}}</a> shared by
-                                  <a href="#">Anonymous</a>
-
-                                  <!-- TODO: add users and username -->
-                                  <small>1 hours ago</small>
-                                  <!-- TODO: add a formatted date -->
-                              </p>
-
-                              <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-                          </li>
-                          <div class="columns">+</div>
-                      </ul>
-
-                  </div>
+                    <ul>
+                        <li *ngFor="let doc of docList; let i = index;"
+                            [class.selected]="doc === selectedDoc"
+                            (click)="onSelect(doc)">
 
 
+                            <p class="event-item">
+                                <small>{{ doc.relevance }}</small>
+                                <!-- TODO: add a times checked document -->
+                                <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                                <a href="#">{{doc.name}}</a> shared by
+                                <a href="#">Anonymous</a>
+
+                                <!-- TODO: add users and username -->
+                                <small>1 hours ago</small>
+                                <!-- TODO: add a formatted date -->
+                            </p>
+
+                            <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+                        </li>
+                        <div class="columns">+</div>
+                    </ul>
+
+                </div>
 
 
-              </div>
-          </md-tab>
+            </div>
+        </md-tab>
 
 
+        <md-tab label="Soso">
+            <div>
+                <progress class="progress is-success" value="60" max="100">60%</progress>
+                <br>
+            </div>
+            <div class="container">
+                <div class="event-timeline">
+
+                    <ul>
+                        <li *ngFor="let doc of docList; let i = index;"
+                            [class.selected]="doc === selectedDoc"
+                            (click)="onSelect(doc)">
 
 
+                            <p class="event-item">
+                                <small>{{ doc.relevance }}</small>
+                                <!-- TODO: add a times checked document -->
+                                <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                                <a href="#">{{doc.name}}</a> shared by
+                                <a href="#">Anonymous</a>
 
-          <md-tab label="Soso">
-              <div>
-                  <progress class="progress is-success" value="60" max="100">60%</progress>
-                  <br>
-              </div>
-              <div class="container">
-              <div class="event-timeline">
+                                <!-- TODO: add users and username -->
+                                <small>1 hours ago</small>
+                                <!-- TODO: add a formatted date -->
+                            </p>
 
-                  <ul>
-                      <li *ngFor="let doc of docList; let i = index;"
-                          [class.selected]="doc === selectedDoc"
-                          (click)="onSelect(doc)">
+                            <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+                        </li>
+                        <div class="columns">+</div>
+                    </ul>
 
-
-                          <p class="event-item">
-                              <small>{{ doc.relevance }}</small>
-                              <!-- TODO: add a times checked document -->
-                              <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                              <a href="#">{{doc.name}}</a> shared by
-                              <a href="#">Anonymous</a>
-
-                              <!-- TODO: add users and username -->
-                              <small>1 hours ago</small>
-                              <!-- TODO: add a formatted date -->
-                          </p>
-
-                          <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-                      </li>
-                      <div class="columns">+</div>
-                  </ul>
-
-              </div>
-              </div>
-          </md-tab>
+                </div>
+            </div>
+        </md-tab>
 
 
-          <md-tab label="False">
-              <div class="container">
-              <div>
-                  <progress class="progress is-success" value="60" max="100">60%</progress>
-                  <br>
-              </div>
+        <md-tab label="False">
+            <div class="container">
+                <div>
+                    <progress class="progress is-success" value="60" max="100">60%</progress>
+                    <br>
+                </div>
 
-              <div class="event-timeline">
+                <div class="event-timeline">
 
-                  <ul>
-                      <li *ngFor="let doc of docList; let i = index;"
-                          [class.selected]="doc === selectedDoc"
-                          (click)="onSelect(doc)">
+                    <ul>
+                        <li *ngFor="let doc of docList; let i = index;"
+                            [class.selected]="doc === selectedDoc"
+                            (click)="onSelect(doc)">
 
 
-                          <p class="event-item">
-                              <small>{{ doc.relevance }}</small>
-                              <!-- TODO: add a times checked document -->
-                              <span class="icon-item-type"><i class="fa fa-star"></i></span>
-                              <a href="#">{{doc.name}}</a> shared by
-                              <a href="#">Anonymous</a>
+                            <p class="event-item">
+                                <small>{{ doc.relevance }}</small>
+                                <!-- TODO: add a times checked document -->
+                                <span class="icon-item-type"><i class="fa fa-star"></i></span>
+                                <a href="#">{{doc.name}}</a> shared by
+                                <a href="#">Anonymous</a>
 
-                              <!-- TODO: add users and username -->
-                              <small>1 hours ago</small>
-                              <!-- TODO: add a formatted date -->
-                          </p>
+                                <!-- TODO: add users and username -->
+                                <small>1 hours ago</small>
+                                <!-- TODO: add a formatted date -->
+                            </p>
 
-                          <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
-                      </li>
-                      <div class="columns">+</div>
-                  </ul>
+                            <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
+                        </li>
+                        <div class="columns">+</div>
+                    </ul>
 
-              </div>
-              </div>
-          </md-tab>
+                </div>
+            </div>
+        </md-tab>
 
-          <md-tab label="+">
+        <md-tab label="+">
 
-              <div class="container">
-              <div class="field">
-                  <label class="label">Ressource Towards</label>
-                  <p class="control">
+            <div class="container">
+                <div class="field">
+                    <label class="label">Ressource Towards</label>
+                    <p class="control">
                     <span class="select">
-                      <select>
+                      <select #ressourceType>
                           <option> True</option>
                           <option> False</option>
                           <option> Controlversial</option>
                       </select>
                     </span>
-                  </p>
-              </div>
+                    </p>
+                </div>
 
-              <div class="field">
-                  <label class="label">Ressource Name</label>
-                  <p class="control">
-                      <input class="input" type="text" placeholder="Text input">
-                  </p>
-              </div>
+                <div class="field">
+                    <label class="label">Ressource Name</label>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Text input" #ressourceName>
+                    </p>
+                </div>
 
-              <div class="field">
-                  <label class="label">Ressource URL</label>
-                  <p class="control">
-                      <input class="input" type="text" placeholder="http://www.resource/site/document.pdf" value="">
-                  </p>
-                  <p class="help is-success">This URL is registered</p>
-              </div>
-
-
-              <div class="field">
-                  <p class="control">
-                      <label class="checkbox">
-                          <input type="checkbox">
-                          I agree to the <a href="#">terms and conditions</a>
-                      </label>
-                  </p>
-              </div>
+                <div class="field">
+                    <label class="label">Ressource URL</label>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="http://www.resource/site/document.pdf"  #ressourceURL>
+                    </p>
+                    <p class="help is-success">This URL is registered</p>
+                </div>
 
 
-              <div class="field is-grouped">
-                  <p class="control">
-                      <button class="button is-primary">Submit</button>
-                  </p>
-              </div>
-              </div>
+                <div class="field">
+                    <p class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                    </p>
+                </div>
 
-          </md-tab>
+
+                <div class="field is-grouped">
+                    <p class="control">
+                        <button class="button is-primary" (click)="addDocument(ressourceName.value, ressourceURL.value, ressourceType.value);">Submit</button>
+                    </p>
+                </div>
+            </div>
+
+        </md-tab>
 
 
-      </md-tab-group>
-
+    </md-tab-group>
 
 
 </div>

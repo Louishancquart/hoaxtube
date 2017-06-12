@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
-
+import {Component} from "@angular/core";
 
 
 @Component({
-  moduleId: module.id,
-  selector: 'video-box',
-  templateUrl: 'video-box.component.html',
-  styleUrls:['video-box.component.css']
+    moduleId: module.id,
+    selector: 'video-box',
+    templateUrl: 'video-box.component.html',
+    styleUrls: ['video-box.component.css']
 })
 
 
-
-
-export class VideoBoxComponent  {
+export class VideoBoxComponent {
 }
 
 // function insertTableIntoPlayer() {

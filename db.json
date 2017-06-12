@@ -1,123 +1,52 @@
 {
-  "video": {
-    "id": "L3cpFYNPYz8",
-    "name": "MÉSOPOTAMIE & CIVILISATION SUMÉRIENNE (Ep.#1)",
-    "url": "http://youtube.com/L3cpFYNPYz8",
-    "relevance": 3,
-    "checked_times": 234,
-    "type": 1,
-    "positive_review": {
-      "id": 0,
-      "type": 1,
-      "confirmed_times": 23,
-      "relying_docs": {}
+  "videoDocuments": [
+    {
+      "id": "11",
+      "name": "wikipedia",
+      "url": "http://wikipedia.com",
+      "relevance": "5",
+      "checked_times": "275",
+      "type": "1"
     },
-    "negative_review": {
-      "id": 0,
-      "type": 1,
-      "confirmed_times": 23,
-      "relying_docs": {}
+    {
+      "id": "2",
+      "name": "instagram",
+      "url": "http://instagram.com",
+      "relevance": "35",
+      "checked_times": "2134",
+      "type": "0"
     },
-    "controversial_review": {
-      "id": 0,
-      "type": 1,
-      "confirmed_times": 23,
-      "relying_docs": {}
+    {
+      "id": 1497282170949,
+      "name": "totot",
+      "url": {},
+      "relevance": 0,
+      "checked_times": 0,
+      "type": {}
     },
-    "parts": [
-      {
-        "id": 1,
-        "start": 0,
-        "end": 111,
-        "positive_review": {
-          "id": 0,
-          "type": 1,
-          "confirmed_times": 23,
-          "relying_docs": [
-            {
-              "id": 11,
-              "name": "Doc1",
-              "url": "http://wikipedia.com",
-              "positive_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "negative_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "controversial_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              }
-            },
-            {
-              "id": 12,
-              "name": "Doc2",
-              "url": "http://wikipedia.com",
-              "positive_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "negative_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "controversial_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              }
-            },
-            {
-              "id": 13,
-              "name": "Doc3",
-              "url": "http://wikipedia.com",
-              "positive_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "negative_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              },
-              "controversial_review": {
-                "id": 0,
-                "type": 1,
-                "confirmed_times": 23,
-                "relying_docs": {}
-              }
-            }
-          ]
-        },
-        "negative_review": {
-          "id": 0,
-          "type": 1,
-          "confirmed_times": 23,
-          "relying_docs": {}
-        },
-        "controversial_review": {
-          "id": 0,
-          "type": 1,
-          "confirmed_times": 23,
-          "relying_docs": {}
-        }
-      }
-    ]
-  }
+    {
+      "id": 1497282170953,
+      "name": "totot",
+      "url": {},
+      "relevance": 0,
+      "checked_times": 0,
+      "type": {}
+    },
+    {
+      "id": 1497282413423,
+      "name": "sdfsd",
+      "url": "sdfsdfsdf.pdfffffff",
+      "relevance": 0,
+      "checked_times": 0,
+      "type": "True"
+    },
+    {
+      "id": 1497282414617,
+      "name": "sdfsd",
+      "url": "sdfsdfsdf.pdfffffff",
+      "relevance": 0,
+      "checked_times": 0,
+      "type": "True"
+    }
+  ]
 }
