@@ -10,18 +10,15 @@
 
     <md-tab-group>
         <md-tab label="True">
-            <div class="container">
-                <div class="columns">
-                    <progress class="progress is-success" value="60" max="100">60%</progress>
+                <div>
+                    <progress class="progress is-primary" value="60" max="100">60%</progress>
                     <br>
                 </div>
 
                 <div class="event-timeline">
 
                     <ul>
-                        <li *ngFor="let doc of docList; let i = index;"
-                            [class.selected]="doc === selectedDoc"
-                            (click)="onSelect(doc)">
+                        <li *ngFor="let doc of docList; let i = index;">
 
 
                             <p class="event-item">
@@ -38,13 +35,11 @@
 
                             <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
                         </li>
-                        <div class="columns">+</div>
                     </ul>
 
                 </div>
 
 
-            </div>
         </md-tab>
 
 
@@ -57,9 +52,7 @@
                 <div class="event-timeline">
 
                     <ul>
-                        <li *ngFor="let doc of docList; let i = index;"
-                            [class.selected]="doc === selectedDoc"
-                            (click)="onSelect(doc)">
+                        <li *ngFor="let doc of docList; let i = index;">
 
 
                             <p class="event-item">
@@ -76,7 +69,7 @@
 
                             <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
                         </li>
-                        <div class="columns">+</div>
+
                     </ul>
 
                 </div>
@@ -85,7 +78,7 @@
 
 
         <md-tab label="False">
-            <div class="container">
+
                 <div>
                     <progress class="progress is-success" value="60" max="100">60%</progress>
                     <br>
@@ -94,9 +87,7 @@
                 <div class="event-timeline">
 
                     <ul>
-                        <li *ngFor="let doc of docList; let i = index;"
-                            [class.selected]="doc === selectedDoc"
-                            (click)="onSelect(doc)">
+                        <li *ngFor="let doc of docList; let i = index;">
 
 
                             <p class="event-item">
@@ -113,24 +104,22 @@
 
                             <!--<button class="delete" (click)="delete(doc); $event.stopPropagation()">x</button>-->
                         </li>
-                        <div class="columns">+</div>
+
                     </ul>
 
                 </div>
-            </div>
         </md-tab>
 
         <md-tab label="+">
 
-            <div class="container">
                 <div class="field">
-                    <label class="label">Ressource Towards</label>
+                    <label class="label">Ressource orientation</label>
                     <p class="control">
                     <span class="select">
                       <select #ressourceType>
-                          <option> True</option>
-                          <option> False</option>
-                          <option> Controlversial</option>
+                          <option> positive</option>
+                          <option> negative</option>
+                          <option> controlversial</option>
                       </select>
                     </span>
                     </p>
@@ -164,10 +153,13 @@
 
                 <div class="field is-grouped">
                     <p class="control">
-                        <button class="button is-primary" (click)="addDocument(ressourceName.value, ressourceURL.value, ressourceType.value);">Submit</button>
+                        <button class="button is-primary"
+                                (click)="addDocument(ressourceName.value, ressourceURL.value, ressourceType.value);
+                                ressourceName.value = ressourceURL.value ='';">
+                            Submit</button>
                     </p>
                 </div>
-            </div>
+
 
         </md-tab>
 

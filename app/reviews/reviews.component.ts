@@ -1,4 +1,3 @@
-///<reference path='../services/data.ts'/>
 import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
@@ -8,9 +7,6 @@ import {RDocument} from '../services/data';
 
 import 'rxjs/add/operator/switchMap';
 
-// const DOCS: RDocument[] = [
-//
-// ];
 
 @Component({
     moduleId: module.id,
@@ -37,30 +33,10 @@ export class ReviewsComponent implements OnInit {
 
     ngOnInit(): void {
 
-        // this.route.params
-        //     .switchMap((params: Params) => this.documentService.getDocument(+params['id']))
-        //     .subscribe(doc => this.videoDocument = doc);
-
         this.getDocList();
 
-
-        // this.docList = this.getRelatedDocuments(this.getPositiveReview(this.videoDocument));
-        // this.selectedTab = 'trueTab';
     }
 
-
-    //
-    // getParts(): RPart[]{
-    //   return this.videoDocument.parts;
-    // }
-    //
-    // getPositiveReview(video: RDocument): RReview{
-    //    return this.getParts().shift().positive_review;
-    // }
-    //
-    // getRelatedDocuments(review: RReview): RDocument[] {
-    //   return review.relying_docs;
-    // }
 
     getDocList(): void {
         this.documentService.getDocuments().then(videoDocument => this.docList = videoDocument);
