@@ -2088,35 +2088,35 @@ a.box:active {
 }
 
 .progress.is-light::-webkit-progress-value {
-    background-color: #f5f7fa
+    background-color: darkturquoise;
 }
 
 .progress.is-light::-moz-progress-bar {
-    background-color: #f5f7fa
+    background-color: darkturquoise;
 }
 
 .progress.is-dark::-webkit-progress-value {
-    background-color: #69707a
+    background-color: darkturquoise;
 }
 
 .progress.is-dark::-moz-progress-bar {
-    background-color: #69707a
+    background-color: darkturquoise;
 }
 
 .progress.is-primary::-webkit-progress-value {
-    background-color: #1fc8db
+    background-color: darkturquoise;
 }
 
 .progress.is-primary::-moz-progress-bar {
-    background-color: #1fc8db
+    background-color: darkturquoise;
 }
 
 .progress.is-info::-webkit-progress-value {
-    background-color: #42afe3
+    background-color: darkturquoise;
 }
 
 .progress.is-info::-moz-progress-bar {
-    background-color: #42afe3
+    background-color: darkturquoise;
 }
 
 .progress.is-success::-webkit-progress-value {
@@ -2128,19 +2128,19 @@ a.box:active {
 }
 
 .progress.is-warning::-webkit-progress-value {
-    background-color: #fce473
+    background-color: #F8A93F
 }
 
 .progress.is-warning::-moz-progress-bar {
-    background-color: #fce473
+    background-color: #F8A93F
 }
 
 .progress.is-danger::-webkit-progress-value {
-    background-color: #ed6c63
+    background-color: #CC4945
 }
 
 .progress.is-danger::-moz-progress-bar {
-    background-color: #ed6c63
+    background-color: #CC4945
 }
 
 .progress.is-small {

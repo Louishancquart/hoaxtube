@@ -16,4 +16,9 @@ https://github.com/angular-ui-tree/angular-ui-tree
 
 https://angular.io/docs/ts/latest/guide/server-communication.html#!#cors
 
+TODO:
+- review :docs per tabs display
+- reviews: associate docs to a video
+- refactor app
+
 
