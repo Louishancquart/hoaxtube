@@ -5,6 +5,7 @@ import {VideoDetailsComponent} from './app/body/video-details/video-details.comp
 import {VideoBoxComponent} from './app/body/video-box/video-box.component';
 import {ReviewsComponent} from './app/body/reviews/reviews.component';
 import {DonateComponent} from './app/body/donate/donate.component';
+import {PageNotFoundComponent} from './app/utils/pageNotFound/page-not-found.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
     {path: 'video-details', component: VideoDetailsComponent},
     {path: 'donate', component: DonateComponent},
     // {path: 'api/videoDocuments/:id', component: ReviewsComponent},
+
+    { path: '**', component: PageNotFoundComponent },
 ];
 
 
