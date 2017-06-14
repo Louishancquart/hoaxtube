@@ -4,8 +4,8 @@
 </div>
 <div id="plugin">
     <div id="bars" style="height: 500px;">
-        <div style="height:55%; " id="false"></div>
-        <div style="height:15%; " id="soso"></div>
-        <div style="height:30%; " id="true"></div>
+        <div [style.height.%]="negativeRelevancePercentage"  id="false"></div>
+        <div [style.height.%]="controversialRelevancePercentage" id="soso"></div>
+        <div [style.height.%]="positiveRelevancePercentage" id="true"></div>
     </div>
 </div>
