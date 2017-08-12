@@ -70,8 +70,8 @@ export class HomeComponent implements OnInit {
                 }
             }
         }
-        this.positiveRelevancePercentage = (this.positiveRelevance / this.totalRelevance) * 100 ;
-        this.negativeRelevancePercentage = (this.negativeRelevance / this.totalRelevance) * 100 ;
-        this.controversialRelevancePercentage = (this.controversialRelevance / this.totalRelevance) * 100;
+        this.positiveRelevancePercentage = Math.round((this.positiveRelevance / this.totalRelevance) * 1000) / 10;
+        this.negativeRelevancePercentage = Math.round((this.negativeRelevance / this.totalRelevance) * 1000) / 10;
+        this.controversialRelevancePercentage = Math.round((this.controversialRelevance / this.totalRelevance) * 1000) / 10;
     }
 }
